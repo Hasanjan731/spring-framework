@@ -14,9 +14,19 @@ public class CydeoApp {
 
         ft.createAccount();
 
+        //PartTimeMentor pt = container.getBean("p2",PartTimeMentor.class);
+        PartTimeMentor pt = container.getBean(PartTimeMentor.class); //using @Primary annotation for default bean or object
+        // when you have more than two beans from the same Config class
+
+        pt.createAccount();
+
         String str = container.getBean(String.class);
 
         System.out.println(str);
+
+        Integer num = container.getBean(Integer.class);
+
+        System.out.println(num);
 
     }
 }
