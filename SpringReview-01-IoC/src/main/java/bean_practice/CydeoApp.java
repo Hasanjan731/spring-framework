@@ -7,7 +7,8 @@ public class CydeoApp {
 
     public static void main(String[] args) {
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigEmployee.class);
+        ApplicationContext container = new AnnotationConfigApplicationContext(ConfigEmployee.class, NewConfigApp.class);
+        //ApplicationContext container = new AnnotationConfigApplicationContext(String.class);
 
         FullTimeEmployee ft = container.getBean(FullTimeEmployee.class);
 
@@ -16,5 +17,17 @@ public class CydeoApp {
         PartTimeEmployee pt = container.getBean(PartTimeEmployee.class);
 
         pt.createAccount();
+
+       /* String str1 = container.getBean("message1", String.class);
+        String str2 = container.getBean("message2", String.class);
+
+        System.out.println(str1);
+        System.out.println(str2);*/
+
+        String str = container.getBean(String.class);
+
+        System.out.println(str);
+
+
     }
 }
