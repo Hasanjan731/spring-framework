@@ -11,11 +11,11 @@ public class NewConfigApp {
     @Bean
     //@Bean(name="message1")
     public String strObj1(){
-        return "welcome to CydeoApp";
+        return "welcome to CydeoApp.";
     }
 
     //@Bean(name="message2")
     public String strObj2(){
-        return "Spring Core Practice";
+        return "Spring Core Practice.";
     }
 }
