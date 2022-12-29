@@ -30,7 +30,7 @@ public class CarController {
     }
 
     @RequestMapping("/info/{make}/{year}") //localhost:8080/car/info/honda/year
-    public String getCarInfo(@PathVariable String make, @PathVariable Integer year, Model model){
+    public String getCarInfo(@PathVariable String make, @PathVariable Integer year, Model model){ //@PathVariable can not be optional. It looks like the end point
 
         model.addAttribute("make", make);
         model.addAttribute("year", year);
