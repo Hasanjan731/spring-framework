@@ -8,10 +8,10 @@
 <div align="center">
 <body>
 
-    <form th:object="${mentor}">
+    <form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}">
 
         <label>First Name:</label>
-        <input type="text" id="FirstName" th:field="*{firstName}"><br>
+        <input type="text" id="FirstName" th:field="*{firstName}"><br>  <!--mentor.getFirstName-->
 
         <label>Last Name:</label>
         <input type="text" id="LastName" th:field="*{lastName}"><br>
